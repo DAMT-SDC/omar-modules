@@ -4,9 +4,10 @@
   "description": "Addidas FEC",
   "main": "index.js",
   "scripts": {
-    "seed": "node ./seedData.js",
+    "seed": "node ./database/Seed/seedData.js",
     "start": "nodemon ./server/app.js",
     "webpack": "webpack",
+    "react-dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "express": "4.16.4",
     "express-partials": "0.3.0",
     "express-session": "1.15.6",
+    "faker": "^4.1.0",
     "file-system": "^2.2.2",
     "helmet": "3.14.0",
     "morgan": "1.9.1",
