@@ -3,10 +3,15 @@ const mysql = require('mysql');
 const seq = require('sequelize');
 require('dotenv').config();
 
-const connectionPostgres = new seq('addidas', 'postgres', 'timtran', {
-  host: 'localhost',
-  dialect: 'postgres',
-});
+const connectionPostgres = new seq(
+  'addidas',
+  process.env.DB_USERNAME,
+  process.env.DB_PASSWORD,
+  {
+    host: 'localhost',
+    dialect: 'postgres',
+  }
+);
 
 connectionPostgres
   .authenticate()
