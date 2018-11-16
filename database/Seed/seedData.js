@@ -1,15 +1,14 @@
 const products = require('../models/products');
+// const test = require('../models/test');
 // const Faker = require('Faker'); //for omar
 // const utils = require('../../utils/utils'); //for omar
 const fs = require('fs');
 const { fake } = require('faker');
 
-console.time();
-
 // example of Faker fake('{{name.lastName}}, {{name.firstName}}'));
 // writeFile.write(`name | color | price | image | review_count | options`);
 //to handle img arr for options and imgs
-const img = [];
+
 const color = [
   'red',
   'blue',
@@ -22,18 +21,66 @@ const color = [
   'black',
 ];
 
-const writeFile = fs.createWriteStream(
-  './database/Seed/fakeData/fakeSeedData2.csv'
-);
+// const writeFile = fs.createWriteStream(
+//   './database/Seed/fakeData/fakeSeedData.csv'
+// );
 
 const imgArr = n => {
+  const img = [];
   for (let i = 0; i < n; i++) {
-    img.push(`https://loremflickr.com/g/320/240/paris?lock=${i}`);
+    img.push(
+      `https://loremflickr.com/g/320/240/paris?lock=${Math.floor(
+        Math.random() * 1000
+      )}`
+    );
   }
+  return img;
 };
 
-imgArr(1000);
+const genData = function(writer, encoding, callback) {
+  let i = 10000000;
+  console.time('Time this');
+  const test = function() {
+    let ok = true;
 
+    while (i > 0 && ok) {
+      const randomPrice = `$${Math.floor(Math.random() * (300 - 100)) + 100}`;
+      //to genarate 3 random colors;
+      const randomColorArr = color.sort(() => 0.5 - Math.random());
+      const selectColor = randomColorArr.slice(0, 3);
+      //fake ProductName
+      const productName = fake('{{name.lastName}}_{{address.zipCode}}');
+      //fake option img
+      const selectedOption = imgArr(3);
+      //fake img
+      const selectedImg = imgArr(9);
+      const dataGen = `${productName} | ${selectColor} | ${randomPrice} | ${selectedImg} | ${Math.floor(
+        Math.random() * (2000 - 5) + 5
+      )} | ${selectedOption} \n`;
+
+      i -= 1;
+      if (i === 0) {
+        writer.write(dataGen, encoding, callback);
+        console.timeEnd('Time this');
+      } else {
+        ok = writer.write(dataGen, encoding);
+      }
+    }
+
+    if (i > 0) {
+      // had to stop early!
+      // write some more once it drains
+      writer.once('drain', test);
+    }
+  };
+  test();
+};
+
+// genData(writeFile, 'utf8', err => {
+//   if (err) console.error(err);
+// });
+
+/*
 const genFakeData = n => {
   for (let i = 0; i < n; i++) {
     const randomPrice = `$${Math.floor(Math.random() * (300 - 100)) + 100}`;
@@ -63,13 +110,13 @@ const genFakeData = n => {
 genFakeData(3000000);
 
 console.timeEnd();
-/*
-//this is to recreate table 
+
+//this is to recreate table
 const createProduct = () => {
-  products
-  .create({
-    name: fake(`{{name.lastName}}_{{address.zipCode}}`),
-    colors:
+  test
+    .create({
+      name: fake(`{{name.lastName}}_{{address.zipCode}}`),
+      colors:
         color[utils.generateRandomNumber(color.length)] +
         ' / ' +
         color[utils.generateRandomNumber(color.length)] +
@@ -89,5 +136,4 @@ const createProduct = () => {
 };
 
 createProduct();
-
 */
