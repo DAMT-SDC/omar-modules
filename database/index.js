@@ -1,23 +1,13 @@
-const postgres = require("pg")
-const mysql = require("mysql")
-const seq = require("sequelize")
+const postgres = require('pg');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/sdcTest');
 require('dotenv').config();
 
-const connectionPostgres = new seq("addidas", "omarjandali", "hackreactor25", {
-  "host":"db",
-  "dialect":"postgres",
-})
+const productsDb = mongoose.connection;
 
-connectionPostgres
-  .authenticate()
-  .then(() => {
-    console.log("postgres connected")
-  })
-  .catch((err) => {
-    console.log(
-      "error with server"
-    )
-    console.log(err)
-  })
+productsDb.on('error', console.error.bind(console, 'connection error'));
+productsDb.once('open', () => {
+  console.log('connected to mongodb');
+});
 
-module.exports.postgres = connectionPostgres;
+module.exports = productsDb;
