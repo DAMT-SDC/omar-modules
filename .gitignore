@@ -1,3 +1,5 @@
 node_modules/
 .env
-fakeData/
+.config
+bundle.js
+fakeData/ 
