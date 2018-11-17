@@ -21,9 +21,9 @@ const color = [
   'black',
 ];
 
-// const writeFile = fs.createWriteStream(
-//   './database/Seed/fakeData/fakeSeedData.csv'
-// );
+const writeFile = fs.createWriteStream(
+  './database/Seed/fakeData/fakeSeedData1.csv'
+);
 
 const imgArr = n => {
   const img = [];
@@ -76,9 +76,9 @@ const genData = function(writer, encoding, callback) {
   test();
 };
 
-// genData(writeFile, 'utf8', err => {
-//   if (err) console.error(err);
-// });
+genData(writeFile, 'utf8', err => {
+  if (err) console.error(err);
+});
 
 /*
 const genFakeData = n => {
