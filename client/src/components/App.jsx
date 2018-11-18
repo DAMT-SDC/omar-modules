@@ -36,7 +36,6 @@ export default class App extends Component {
         console.log(response.data);
         this.setState({
           product: response.data,
-          featured: response.data.featured,
           options: response.data.options.split(','),
           images: response.data.images.split(','),
         });
@@ -47,22 +46,23 @@ export default class App extends Component {
   }
 
   render() {
+    const feature = this.state.images.slice(0, 1);
     console.log(this.state.product);
     return (
-      <div className={styles.moduleMargin}>
+      <div className={`moduleMargin ${styles.moduleMargin}`}>
         <Breadcrum />
-        <div className={styles.productDetails}>
-          <div className={styles.banner} />
-          <div className={styles.detailsContent}>
+        <div className={`productDetails ${styles.productDetails}`}>
+          <div className={`banner ${styles.banner}`} />
+          <div className={`detailsContent ${styles.detailsContent}`}>
             <div className={styles.productCarousel}>
               <Carousel
-                featured={this.state.featured}
+                featured={feature}
                 images={this.state.images}
                 magnification={this.magnification}
               />
             </div>
-            <div className={styles.status}>NEW</div>
-            <div className={styles.details}>
+            <div className={`status ${styles.status}`}>NEW</div>
+            <div className={`details ${styles.details}`}>
               <Details
                 product={this.state.product}
                 options={this.state.options}

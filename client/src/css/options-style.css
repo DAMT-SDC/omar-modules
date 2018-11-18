@@ -1,54 +1,55 @@
-.OptionSection  {
-  margin-right:auto;
-  margin-bottom:40px
+.OptionSection {
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
-.OptionTitle  {
-  width:100%;
-  margin:0 0 10px;
-  font-size:20px;
-  line-height:18px
+.OptionTitle {
+  width: 100%;
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 18px;
 }
 
-.OptionColorList  {
-  color:#98989A;
-  width:100%;
-  font-size:13px;
-  letter-spacing:2px;
-  margin-bottom:10px;
-  text-align: left
+.OptionColorList {
+  color: #98989a;
+  width: 100%;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
-.OptionColorSection  {
-  width:100%
+.OptionColorSection {
+  width: 100%;
 }
 
-.OptionsColorIcons  {
-  flex-wrap:wrap;
-  display:flex;
-  flex-direction:row
+.OptionsColorIcons {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
 }
 
-.OptionsColorIconItem  {
-  flex:1 0 auto;
-  flex-grow:0;
-  flex-shrink:0;
-  flex-basis:calc(25% - 5px);
-  max-width:70px;
-  cursor:pointer;
+.OptionsColorIconItem {
+  flex: 1 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(25% - 5px);
+  max-width: 70px;
+  cursor: pointer;
   margin: 0 10px 10px 0;
-  display:block;
-  position:relative;
-  height:70px
+  display: block;
+  position: relative;
+  height: 70px;
 }
 
-.OptionsColorIconBackground  {
-  color:inherit;
-  cursor:pointer;
-  text-decoration:none
+.OptionsColorIconBackground {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.OptionsColorsIconsPic  {
-  border-radius:50%;
-  background-size:cover;
+.OptionsColorsIconsPic {
+  border-radius: 50%;
+  width: 70px;
+  background-size: cover;
 }

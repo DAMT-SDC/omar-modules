@@ -1,20 +1,23 @@
-.FeaturedContainer  {
-  height:800px
+.FeaturedContainer {
+  height: 800px;
 }
 
-.FeaturedSelector  {
-  width:800px;
-  height:100%;
-  margin:auto;
-  position:relative
+.FeaturedSelector {
+  width: 800px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.FeaturedImage  {
-  cursor:'url(https://png.icons8.com/metro/1600/zoom-in.png)';
-  width:100%;
-  height:100%;
-  max-width:none;
-  max-height:100vw;
-  margin:auto;
-  display:block
+.FeaturedImage {
+  cursor: 'url(https://png.icons8.com/metro/1600/zoom-in.png)';
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: 100vw;
+  margin: auto;
+  display: block;
+  width: 1000px;
 }
