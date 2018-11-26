@@ -34,6 +34,7 @@ export default class App extends Component {
       .get('/api/product')
       .then(response => {
         console.log(response.data);
+        console.log(typeof response.data.options);
         this.setState({
           product: response.data,
           options: response.data.options.split(','),
