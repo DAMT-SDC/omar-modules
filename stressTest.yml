@@ -1,0 +1,17 @@
+config:
+  target: 'http://localhost:3001'
+  phases:
+    - duration: 10
+      arrivalRate: 1000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+      - get:
+          url: '/api/product'
+          capture:
+            # capturing responce using reg expression
+            - regexp: '[^]*'
+              as: 'response'
+      # - log: 'response= {{response}}'

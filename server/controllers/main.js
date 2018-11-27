@@ -3,8 +3,8 @@ const utils = require('../../utils/utils');
 
 const controller = {
   get: (req, res) => {
-    // var recordId = utils.generateRandomNumber(10000000);
-    let recordId = 50;
+    var recordId = Math.floor(Math.random() * (10000000 - 9000000) + 9000000);
+    // let recordId = 50;
     products
       .findById(recordId)
       .then(response => {
