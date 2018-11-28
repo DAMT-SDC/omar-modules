@@ -22,7 +22,7 @@ const color = [
 ];
 
 const writeFile = fs.createWriteStream(
-  './database/Seed/fakeData/fakeSeedData1.csv'
+  './database/Seed/fakeData/fakeSeedData.csv'
 );
 
 const imgArr = n => {
@@ -38,7 +38,7 @@ const imgArr = n => {
 };
 
 const genData = function(writer, encoding, callback) {
-  let i = 10000000;
+  let i = 100000;
   console.time('Time this');
   const test = function() {
     let ok = true;
