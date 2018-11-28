@@ -56,5 +56,6 @@
   "bugs": {
     "url": "https://github.com/FEC-MOTH/omar-modules/issues"
   },
-  "homepage": "https://github.com/FEC-MOTH/omar-modules#readme"
+  "homepage": "https://github.com/FEC-MOTH/omar-modules#readme",
+  "devDependencies": {}
 }
