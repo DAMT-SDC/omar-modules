@@ -1,4 +1,4 @@
-const products = require('../models/products');
+const { ProductPostgres } = require('../models/products');
 // const test = require('../models/test');
 const Faker = require('Faker'); //for omar
 const utils = require('../../utils/utils'); //for omars
@@ -83,20 +83,19 @@ genData(writeFile, 'utf8', err => {
 
 //this is to recreate table
 const createProduct = () => {
-  products
-    .create({
-      name: fake(`{{name.lastName}}_{{address.zipCode}}`),
-      colors:
-        color[utils.generateRandomNumber(color.length)] +
-        ' / ' +
-        color[utils.generateRandomNumber(color.length)] +
-        ' / ' +
-        color[utils.generateRandomNumber(color.length)],
-      price: utils.generateRandomNumber(501),
-      images: 'mature',
-      review_count: utils.generateRandomNumber(1001),
-      options: 'please stop',
-    })
+  ProductPostgres.create({
+    name: fake(`{{name.lastName}}_{{address.zipCode}}`),
+    colors:
+      color[utils.generateRandomNumber(color.length)] +
+      ' / ' +
+      color[utils.generateRandomNumber(color.length)] +
+      ' / ' +
+      color[utils.generateRandomNumber(color.length)],
+    price: utils.generateRandomNumber(501),
+    images: 'mature',
+    review_count: utils.generateRandomNumber(1001),
+    options: 'please stop',
+  })
     .then(() => {
       console.log('posted');
     })
