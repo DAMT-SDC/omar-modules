@@ -16,7 +16,7 @@ services:
     container_name: postgres
     restart: always
     build: .
-      - '5432:5432'
-    ports: 80:3001
+    ports:
+      - '80:3001'
     links:
       - productionPG
