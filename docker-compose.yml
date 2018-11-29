@@ -18,5 +18,5 @@ services:
     build: .
     ports:
       - '80:3001'
-    links:
-      - 'ec2-34-214-196-109.us-west-2.compute.amazonaws.com'
+    # links:
+    #   - 'ec2-34-214-196-109.us-west-2.compute.amazonaws.com'
