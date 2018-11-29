@@ -10,4 +10,4 @@ services:
       POSTGRES_PASSWORD: timtran
       POSTGRES_DB: addidas
     ports:
-      - '3001:5432'
+      - '1128:5432'
