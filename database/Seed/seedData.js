@@ -21,6 +21,7 @@ const color = [
   'black',
 ];
 
+/*
 const writeFile = fs.createWriteStream(
   './database/Seed/fakeData/fakeSeedData4.csv'
 );
@@ -79,8 +80,7 @@ const genData = function(writer, encoding, callback) {
 genData(writeFile, 'utf8', err => {
   if (err) console.error(err);
 });
-
-/*
+*/
 
 //this is to recreate table
 const createProduct = () => {
@@ -106,4 +106,3 @@ const createProduct = () => {
 };
 
 createProduct();
-*/
