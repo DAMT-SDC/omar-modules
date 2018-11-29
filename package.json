@@ -34,7 +34,6 @@
     "morgan": "1.9.1",
     "mysql": "2.16.0",
     "mysql2": "1.6.1",
-    "nodemon": "1.18.4",
     "normalize-port": "1.0.0",
     "path": "0.12.7",
     "pg": "7.6.0",
@@ -56,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/FEC-MOTH/omar-modules/issues"
   },
-  "homepage": "https://github.com/FEC-MOTH/omar-modules#readme"
+  "homepage": "https://github.com/FEC-MOTH/omar-modules#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
 }
