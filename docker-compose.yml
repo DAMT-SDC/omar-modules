@@ -19,4 +19,4 @@ services:
     ports:
       - '80:3001'
     links:
-      - productionPG
+      - '34.214.196.109'
