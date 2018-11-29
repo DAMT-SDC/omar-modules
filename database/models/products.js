@@ -30,4 +30,4 @@ const ProductPostgres = postgres.define(
     })
 );
 
-module.exports = ProductPostgres;
+module.exports = { ProductPostgres };
