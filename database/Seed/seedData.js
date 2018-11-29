@@ -7,7 +7,7 @@ const { fake } = require('faker');
 
 // example of Faker fake('{{name.lastName}}, {{name.firstName}}'));
 // writeFile.write(`name | color | price | image | review_count | options`);
-//to handle img arr for options and imgs
+// to handle img arr for options and imgs
 
 const color = [
   'red',
@@ -20,9 +20,9 @@ const color = [
   'white',
   'black',
 ];
-/*
+
 const writeFile = fs.createWriteStream(
-  './database/Seed/fakeData/fakeSeedData.csv'
+  './database/Seed/fakeData/fakeSeedData4.csv'
 );
 
 const imgArr = n => {
@@ -38,7 +38,7 @@ const imgArr = n => {
 };
 
 const genData = function(writer, encoding, callback) {
-  let i = 100000;
+  let i = 2000000;
   console.time('Time this');
   const test = function() {
     let ok = true;
@@ -79,7 +79,8 @@ const genData = function(writer, encoding, callback) {
 genData(writeFile, 'utf8', err => {
   if (err) console.error(err);
 });
-*/
+
+/*
 
 //this is to recreate table
 const createProduct = () => {
@@ -105,3 +106,4 @@ const createProduct = () => {
 };
 
 createProduct();
+*/

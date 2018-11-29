@@ -1,0 +1,13 @@
+version: '3'
+services:
+  productionPG:
+    image: postgres
+    restart: always
+    volumes:
+      - ./docker/data/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: timtran
+      POSTGRES_DB: addidas
+    ports:
+      - '5432:5432'

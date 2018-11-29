@@ -1,22 +1,22 @@
-version: '3'
-services:
-  productionPG:
-    image: postgres
-    restart: always
-    volumes:
-      - ./docker/data/db:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: timtran
-      POSTGRES_DB: addidas
-    ports:
-      - '5432:5432'
+# version: '3'
+# services:
+#   productionPG:
+#     image: postgres
+#     restart: always
+#     volumes:
+#       - ./docker/data/db:/var/lib/postgresql/data
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: timtran
+#       POSTGRES_DB: addidas
+#     ports:
+#       - '5432:5432'
 
-  app:
-    container_name: postgres
-    restart: always
-    build: .
-    ports:
-      - '80:3001'
-    links:
-      - productionPG
+app:
+  container_name: postgres
+  restart: always
+  build: .
+  ports:
+    - '80:3001'
+  links:
+    - productionPG
