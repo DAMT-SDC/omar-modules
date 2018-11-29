@@ -1,10 +1,10 @@
-version: '3'
-services:
-  app:
-    container_name: app
-    restart: always
-    build: .
-    ports:
-      - '80:1128'
-    # links:
-    #   - 'ec2-34-214-196-109.us-west-2.compute.amazonaws.com'
+# version: '3'
+# services:
+#   app:
+#     container_name: app
+#     restart: always
+#     build: .
+#     ports:
+#       - '80:1128'
+# links:
+#   - 'ec2-34-214-196-109.us-west-2.compute.amazonaws.com'
