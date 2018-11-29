@@ -85,7 +85,7 @@ genData(writeFile, 'utf8', err => {
 */
 
 //this is to recreate table
-const createProduct = () => {
+const createProduct = n => {
   for (let i = 0; i < n; i++) {
     test
       .create({
