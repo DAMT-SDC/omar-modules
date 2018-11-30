@@ -9,6 +9,7 @@ const connectionPostgres = new seq(
   process.env.DB_PASSWORD,
   {
     host: 'ec2-52-13-190-214.us-west-2.compute.amazonaws.com',
+    port: 5432,
     dialect: 'postgres',
   }
 );
