@@ -18,7 +18,7 @@ export default class App extends Component {
       });
     axios.defaults.baseURL =
       // 'http://localhost:' + process.env.PORT;
-      '54.218.66.243:3001';
+      '52.13.190.214:3001';
   }
 
   componentDidMount() {
