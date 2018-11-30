@@ -1,3 +1,4 @@
+require('newrelic');
 const server = require('./bin/www/index.js');
 const express = require('express');
 const normalize = require('normalize-port');

@@ -21,10 +21,9 @@ const color = [
   'black',
 ];
 
-/*
-const writeFile = fs.createWriteStream(
-  './database/Seed/fakeData/fakeSeedData1.csv'
-);
+// const writeFile = fs.createWriteStream(
+//   './database/Seed/fakeData/fakeSeedData1.csv'
+// );
 
 const imgArr = n => {
   const img = [];
@@ -81,9 +80,7 @@ genData(writeFile, 'utf8', err => {
   if (err) console.error(err);
 });
 
-
-*/
-
+/*
 //this is to recreate table
 const createProduct = n => {
   for (let i = 0; i < n; i++) {
@@ -110,3 +107,4 @@ const createProduct = n => {
 };
 
 createProduct(2);
+*/
