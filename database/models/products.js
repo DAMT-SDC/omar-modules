@@ -2,7 +2,7 @@ const { postgres } = require('../index.js');
 const seq = require('sequelize');
 
 const ProductPostgres = postgres.define(
-  'product',
+  'products',
   {
     _id: {
       type: seq.INTEGER,

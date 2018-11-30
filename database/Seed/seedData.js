@@ -109,4 +109,4 @@ const createProduct = n => {
   }
 };
 
-createProduct(1000);
+createProduct(2);
