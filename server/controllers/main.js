@@ -4,7 +4,7 @@ const utils = require('../../utils/utils');
 
 const controller = {
   get: (req, res) => {
-    const recordId = Math.floor(Math.random() * (7000000 - 6000000) + 9000000);
+    const recordId = Math.floor(Math.random() * (7000000 - 6000000) + 6000000);
     // var recordId = Math.floor(Math.random() * 1000);
     // let recordId = 1;
     ProductPostgres.findById(recordId)
