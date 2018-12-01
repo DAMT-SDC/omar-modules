@@ -9,7 +9,7 @@ const connectionPostgres = new seq(
   process.env.DB_PASSWORD,
   {
     // host: 'localhost',
-    host: '35.161.248.127',
+    host: '50.112.143.67',
     port: 5432,
     dialect: 'postgres',
   }
